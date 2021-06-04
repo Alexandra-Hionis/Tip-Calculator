@@ -15,9 +15,10 @@ header {
   text-align: center;
 }
 
-.bill-amount {
+.left-column-align {
   margin-top: 18px;
 }
+
 .input {
   padding: 10px;
   align-items: center;
@@ -36,24 +37,30 @@ input.form-control:focus {
 .bottom-section {
   margin-top: 50px;
   background-color: white;
-  border: solid 1px #fb769c;
+  border: solid 1px #ea8a56;
   border-radius: 15px 15px 15px 15px;
   color: grey;
   text-align: center;
 }
 
 .button-outline {
-  color: #fb769c;
-  border: 1px solid #fb769c;
+  color: #ea8a56;
+  border: 1px solid #ea8a56;
 }
 
 .button-outline:hover,
 .button-outline:focus {
-  background: #fb769c;
+  background: #ea8a56;
 }
 
 .button-outline:active,
 .button-outline.active {
-  background: #fb769c;
+  background: #ea8a56;
   box-shadow: none;
+}
+
+.right-column-dollars {
+  margin-top: 18px;
+  color: black;
+  text-align: left;
 }
