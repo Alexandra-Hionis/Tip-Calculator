@@ -4,11 +4,12 @@ body {
 
 header {
   background-color: white;
-  font-size: 28px;
+  font-size: 38px;
   text-align: center;
 }
 .top-section {
-  margin-top: 20px;
+  padding: 30px;
+  margin-top: 30px;
   background-color: #2b2e5c;
   border-radius: 15px 15px 15px 15px;
   color: white;
@@ -35,6 +36,7 @@ input.form-control:focus {
 }
 
 .bottom-section {
+  padding: 30px;
   margin-top: 50px;
   background-color: white;
   border: solid 1px #ea8a56;
@@ -62,5 +64,4 @@ input.form-control:focus {
 .right-column-dollars {
   margin-top: 18px;
   color: black;
-  text-align: left;
 }
