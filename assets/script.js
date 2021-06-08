@@ -22,3 +22,8 @@ function test() {
     };
   }
 }
+
+// Refresh Page
+function refreshPage() {
+  window.location.reload();
+}
