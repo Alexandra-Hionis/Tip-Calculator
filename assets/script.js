@@ -1,11 +1,13 @@
-function test() {
+document.getElementById("customTipSection").style.display = "none";
+
+function calculateTip() {
   const billAmount = document.getElementById("billAmountInput").value;
   const myModal = document.getElementById("myModal");
   if (billAmount.length == "") {
     myModal.style.display = "block";
   } else {
-    const btn = document.querySelector("#btn");
-    btn.onclick = function () {
+    const calculateBtn = document.querySelector("#calculateBtn");
+    calculateBtn.onclick = function () {
       const selections = document.querySelectorAll('input[name="tip"]');
       let userSelection;
       for (const selection of selections) {
@@ -24,6 +26,20 @@ function test() {
   }
 }
 
+function showDiv() {
+  document.getElementById("radioTipSection").style.display = "none";
+  document.getElementById("customTipSection").style.display = "block";
+}
+
+// function customTip() {
+//   const customTipInput = document.getElementById("customTipInput").value;
+//   const section1 = document.getElementById("section1");
+//   const displaySetting = section1.style.display;
+//   if (displaySetting == "block") {
+//     console.log("hi");
+//   } else {
+//   }
+// }
 // Refresh Page
 function refreshPage() {
   window.location.reload();

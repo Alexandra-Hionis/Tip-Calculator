@@ -37,11 +37,13 @@
           </div>
         </div>
       </div>
+
 <!-- Top Section -->
     <!-- Bill Amount Input -->
+    <section>
         <div class="row">
         <div class="col-sm-2"></div>
-        <div class="col-sm-8 top-section">
+        <div class="col-sm-8 top-section" id=radioTipSection>
             <div class="row">
             <div class="col-sm-3"></div>
             <div class="col-sm-3 left-column-align">
@@ -64,7 +66,7 @@
         </div>
 
         <!-- Tip % -->
-        <div class="row">
+        <div class="row" id="tipRadioBtns">
             <div class="col-sm-3"></div>
             <div class="col-sm-3 left-column-align">
             <p>Tip %</p>
@@ -72,31 +74,98 @@
             <div class="col-sm-3 input">
                 <form>
                 <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
-                    <input type="radio" name="tip" value="0.10" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
-                    <label class="btn btn-outline-primary" for="btnradio1">10%</label>
-                  
-                    <input type="radio" name="tip"  value="0.15" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
-                    <label class="btn btn-outline-primary" for="btnradio2">15%</label>
-                  
-                    <input type="radio" name="tip" value="0.20" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
-                    <label class="btn btn-outline-primary" for="btnradio3">20%</label>
+                  <input type="radio" name="tip"  value="0.15" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+                  <label class="btn btn-outline-primary" for="btnradio2">15%</label>
+                
+                  <input type="radio" name="tip" value="0.20" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
+                  <label class="btn btn-outline-primary" for="btnradio3">20%</label>
 
-                    <input type="radio" name="tip" value="0.25"  class="btn-check" name="btnradio" id="btnradio4" autocomplete="off">
-                    <label class="btn btn-outline-primary" for="btnradio4">25%</label>
+                  <input type="radio" name="tip" value="0.25"  class="btn-check" name="btnradio" id="btnradio4" autocomplete="off">
+                  <label class="btn btn-outline-primary" for="btnradio4">25%</label>
                   </div>
-            </form>
-                            
+            </form>             
             <div class="col-sm-3"></div>
-        </div>
-        <div class="col-sm-12">
-             <!-- Button trigger calculation -->
-            <button onclick="test()" type="button" class="btn btn-outline-danger" id="btn" value="Calculate">Calculate</button>
         </div>
         </div>
         <div class="col-sm-2"></div>
+      
+          <!-- Calculate Button -->
+          <div class="row">
+            <div class="col-sm-12">
+              <!-- Custom Tip -->
+           <button onclick="showDiv()" type="button" class="btn btn-outline-danger" id="customBtn" value="Calculate">Custom Tip</button>
+           
+              <!-- Button trigger calculation -->
+              <button onclick="calculateTip()" type="button" class="btn btn-outline-danger" id="calculateBtn" value="Calculate">Calculate</button>
+            </div>
+            </div>
+      </div>
         </div>
         </div>
+  </section>
+
+  <!-- Bill Amount Input -->
+  <section>
+    <div class="row">
+    <div class="col-sm-2"></div>
+    <div class="col-sm-8 top-section" id=customTipSection>
+        <div class="row">
+        <div class="col-sm-3"></div>
+        <div class="col-sm-3 left-column-align">
+            <p>Bill Amount</p>
+        </div>
+        <div class="col-sm-3 input">
+            <form class="row gy-1 gx-3 align-items-center">
+                <div class="input-group" >
+                    <span class="input-group-text">$</span>
+                <input 
+                    type="number"
+                    class="form-control billAmountInput"
+                    id="billAmountInputTwo"
+                    placeholder="Amount"
+                />
+                </div>
+        
+        <div class="col-sm-3"></div>
+        </div>
+    </div>
+
+    <!-- Tip % -->
+            <!-- Custom Tip  -->
+    <div class="row" id="customTipInput">
+      <div class="col-sm-3"></div>
+      <div class="col-sm-3 left-column-align">
+        <p>Tip %</p>
+      </div>
+      <div class="col-sm-3 input">
+        <form class="row gy-1 gx-3 align-items-center">
+            <div class="input-group">
+              <input type="number"
+              class="form-control billAmountInput"
+              id="billAmountInputTwo"
+              placeholder="Percent">
+              <span class="input-group-text">%</span>
+            </div>
     
+      <div class="col-sm-3"></div>
+      </div>
+    </div>
+    <div class="col-sm-2"></div>
+  
+      <!-- Calculate Button -->
+      <div class="row">
+        <div class="col-sm-12">
+          <!-- Custom Tip -->
+       <button onclick="refreshPage()" type="button" class="btn btn-outline-danger" id="customBtn" value="Calculate">Choose Tip</button>
+       
+          <!-- Button trigger calculation -->
+          <button onclick="calculateTip()" type="button" class="btn btn-outline-danger" id="calculateBtn" value="Calculate">Calculate</button>
+        </div>
+        </div>
+  </div>
+    </div>
+    </div>
+</section>
     <!-- Bottom section -->
         <!-- Tip Amount  -->
     <div class="row">
@@ -129,7 +198,7 @@
         <div class="col-sm-2"></div>
         <div class="col-sm-12">
             <!-- Button trigger calculation -->
-           <button onclick="refreshPage()" type="button" class="btn btn-outline-danger" id="btn" value="Calculate">Reset</button>
+           <button onclick="refreshPage()" type="button" class="btn btn-outline-danger" id="reset-btn" value="Calculate">Reset</button>
        </div>
       </div>
       
@@ -142,3 +211,4 @@
     <script src="assets/script.js"></script>
   </body>
 </html>
+

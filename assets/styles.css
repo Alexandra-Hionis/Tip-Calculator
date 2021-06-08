@@ -20,24 +20,26 @@ header {
   margin-top: 18px;
 }
 
-#btn {
+/* Calculate Button */
+.btn-outline-danger {
   margin-top: 22px;
   color: #ea8a56;
   border: 1px solid #ea8a56;
 }
 
-#btn:hover,
-#btn:focus {
+.btn-outline-danger:hover,
+.btn-outline-danger:focus {
   background: #ea8a56;
   color: #2b2e5c;
 }
 
-#btn:active,
-#btn.active {
+.btn-outline-danger:active,
+.btn-outline-danger.active {
   background: #ea8a56;
   box-shadow: none;
 }
 
+/* Reset Button */
 .btn-outline-primary {
   color: #ea8a56;
   border: 1px solid #ea8a56;
@@ -70,11 +72,6 @@ header {
   align-items: center;
 }
 
-/* .input-group > .form-control,
-.input-group > .form-select {
-  border-bottom: orange;
-} */
-
 input.form-control:focus {
   outline: none !important;
   box-shadow: none;
@@ -89,6 +86,8 @@ input.form-control:focus {
   color: grey;
   text-align: center;
 }
+
+/* Tip Radio Buttons */
 
 .button-outline {
   color: #ea8a56;
