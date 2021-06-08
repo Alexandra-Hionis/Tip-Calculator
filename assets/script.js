@@ -1,5 +1,6 @@
 function test() {
-  if (billAmountInput.value.length == "") {
+  const billAmount = document.getElementById("billAmountInput").value;
+  if (billAmount.length == "") {
     console.log("empty");
   } else {
     const btn = document.querySelector("#btn");
@@ -7,14 +8,15 @@ function test() {
       const selections = document.querySelectorAll('input[name="tip"]');
       let userSelection;
       for (const selection of selections) {
-        const billAmount = document.getElementById("billAmountInput").value;
         if (selection.checked) {
           userSelection = selection.value;
           break;
         }
       }
-      document.getElementById("tipAmount").innerHTML =
-        "$" + userSelection * billAmountInput.value;
+      const tipAmount = (userSelection * billAmount).toFixed(2);
+      document.getElementById("tipAmount").innerHTML = "$" + tipAmount;
+
+      document.getElementById("totalAmount").innerHTML = "$" + totalAmount;
     };
   }
 }
