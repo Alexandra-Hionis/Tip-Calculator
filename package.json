@@ -16,7 +16,5 @@
     "url": "https://github.com/Alexandra-Hionis/Tip-Calculator/issues"
   },
   "homepage": "https://github.com/Alexandra-Hionis/Tip-Calculator#readme",
-  "dependencies": {
-    "modal-vanilla": "^0.9.0"
-  }
+  "dependencies": {}
 }

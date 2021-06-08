@@ -1,7 +1,6 @@
 function test() {
   const billAmount = document.getElementById("billAmountInput").value;
   if (billAmount.length == "") {
-    console.log("empty");
   } else {
     const btn = document.querySelector("#btn");
     btn.onclick = function () {
