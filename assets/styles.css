@@ -20,6 +20,51 @@ header {
   margin-top: 18px;
 }
 
+#btn {
+  margin-top: 22px;
+  color: #ea8a56;
+  border: 1px solid #ea8a56;
+}
+
+#btn:hover,
+#btn:focus {
+  background: #ea8a56;
+  color: #2b2e5c;
+}
+
+#btn:active,
+#btn.active {
+  background: #ea8a56;
+  box-shadow: none;
+}
+
+.btn-outline-primary {
+  color: #ea8a56;
+  border: 1px solid #ea8a56;
+}
+
+.btn-outline-primary:hover,
+.btn-outline-primary:focus {
+  background: #ea8a56;
+  color: #2b2e5c;
+}
+
+#btn-outline-primary:active,
+#btn-outline-primary.active {
+  background: #ea8a56;
+  box-shadow: none;
+}
+
+.btn-check:active + .btn-outline-primary,
+.btn-check:checked + .btn-outline-primary,
+.btn-outline-primary.active,
+.btn-outline-primary.dropdown-toggle.show,
+.btn-outline-primary:active {
+  color: #2b2e5c;
+  background-color: #ea8a56;
+  border-color: #ea8a56;
+}
+
 .input {
   padding: 10px;
   align-items: center;
