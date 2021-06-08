@@ -13,10 +13,12 @@ function test() {
           break;
         }
       }
-      const tipAmount = (userSelection * billAmount).toFixed(2);
-      document.getElementById("tipAmount").innerHTML = "$" + tipAmount;
-
-      document.getElementById("totalAmount").innerHTML = "$" + totalAmount;
+      const tipAmount = userSelection * billAmount;
+      document.getElementById("tipAmount").innerHTML =
+        "$" + tipAmount.toFixed(2);
+      const totalAmount = parseInt(billAmount) + tipAmount;
+      document.getElementById("totalAmount").innerHTML =
+        "$" + totalAmount.toFixed(2);
     };
   }
 }
