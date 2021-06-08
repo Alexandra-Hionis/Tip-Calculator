@@ -1,6 +1,8 @@
 function test() {
   const billAmount = document.getElementById("billAmountInput").value;
+  const myModal = document.getElementById("myModal");
   if (billAmount.length == "") {
+    myModal.style.display = "block";
   } else {
     const btn = document.querySelector("#btn");
     btn.onclick = function () {
