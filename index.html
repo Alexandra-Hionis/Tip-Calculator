@@ -29,7 +29,7 @@
               <button onclick="refreshPage()" type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-              <p>Please enter a dollar amount.</p>
+              <p>Please enter a value.</p>
             </div>
             <div class="modal-footer">
               <button onclick="refreshPage()" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -39,6 +39,7 @@
       </div>
 
 <!-- Top Section -->
+
     <!-- Bill Amount Input -->
     <section>
         <div class="row">
@@ -93,8 +94,8 @@
           <div class="row">
             <div class="col-sm-12">
               <!-- Custom Tip -->
-           <button onclick="showDiv()" type="button" class="btn btn-outline-danger" id="customBtn" value="Calculate">Custom Tip</button>
-           
+              <button onclick="showDiv()" type="button" class="btn btn-outline-danger" id="customBtn" value="Calculate">Custom Tip</button>
+          
               <!-- Button trigger calculation -->
               <button onclick="calculateTip()" type="button" class="btn btn-outline-danger" id="calculateBtn" value="Calculate">Calculate</button>
             </div>
@@ -104,6 +105,7 @@
         </div>
   </section>
 
+  <!-- Start Custom Tip Section -->
   <!-- Bill Amount Input -->
   <section>
     <div class="row">
@@ -142,7 +144,7 @@
             <div class="input-group">
               <input type="number"
               class="form-control billAmountInput"
-              id="billAmountInputTwo"
+              id="customPercentInput"
               placeholder="Percent">
               <span class="input-group-text">%</span>
             </div>
@@ -159,13 +161,14 @@
        <button onclick="refreshPage()" type="button" class="btn btn-outline-danger" id="customBtn" value="Calculate">Choose Tip</button>
        
           <!-- Button trigger calculation -->
-          <button onclick="calculateTip()" type="button" class="btn btn-outline-danger" id="calculateBtn" value="Calculate">Calculate</button>
+          <button onclick="customTip()" type="button" class="btn btn-outline-danger" id="calculateBtn" value="Calculate">Calculate</button>
         </div>
         </div>
   </div>
     </div>
     </div>
 </section>
+<!-- End Custom Tip Section -->
     <!-- Bottom section -->
         <!-- Tip Amount  -->
     <div class="row">
