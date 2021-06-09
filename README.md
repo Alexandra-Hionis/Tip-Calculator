@@ -20,9 +20,6 @@ A simple application where all the user needs to do is enter inputs or press a b
 
 ![image 1](assets/images/sample-1.png)
 ![image 2](assets/images/sample-2.png)
-![video](https://media.giphy.com/media/eaqtFnAFebguCbpscK/giphy.gif)
-
-https://media.giphy.com/media/eaqtFnAFebguCbpscK/source.mov
 
 ## License
 
