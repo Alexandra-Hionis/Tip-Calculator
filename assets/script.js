@@ -48,11 +48,13 @@ function customTip() {
     myModal.style.display = "block";
   } else {
     // Divide by 100 to ensure correct %
-    const tipAmount = (customPercentInput / 100) * billAmountCustomTip;
+    const tipAmount =
+      (billAmountCustomTip * 100 * (customPercentInput / 100) * 10) / 1000;
     // Use toFixed to make sure that the number has two digits ater the decimal
-    document.getElementById("tipAmount").innerHTML = "$" + tipAmount;
-    const totalAmount = billAmountCustomTip + tipAmount;
-    document.getElementById("totalAmount").innerHTML = "$" + totalAmount;
+    document.getElementById("tipAmount").innerHTML = "$" + tipAmount.toFixed(2);
+    const totalAmount = parseFloat(billAmountCustomTip) + parseFloat(tipAmount);
+    document.getElementById("totalAmount").innerHTML =
+      "$" + totalAmount.toFixed(2);
   }
 }
 
