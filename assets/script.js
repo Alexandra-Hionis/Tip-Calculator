@@ -27,6 +27,7 @@ function calculateTip() {
         "$" + totalAmount.toFixed(2);
       console.log(typeof userSelection, userSelection);
       console.log(typeof tipAmount, typeof totalAmount);
+      console.log(parseInt(billAmount) + parseInt(tipAmount));
     };
   }
 }
