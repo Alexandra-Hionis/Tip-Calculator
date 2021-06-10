@@ -25,6 +25,8 @@ function calculateTip() {
       const totalAmount = parseInt(billAmount) + tipAmount;
       document.getElementById("totalAmount").innerHTML =
         "$" + totalAmount.toFixed(2);
+      console.log(typeof userSelection, userSelection);
+      console.log(typeof tipAmount, typeof totalAmount);
     };
   }
 }
