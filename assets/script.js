@@ -1,5 +1,6 @@
-// Hide custom tip section
+// Hide custom tip section & split bill section
 document.getElementById("customTipSection").style.display = "none";
+document.getElementById("SplitBillSection").style.display = "none";
 
 function calculateTip() {
   const billAmount = document.getElementById("billAmountInput").value;
@@ -55,9 +56,14 @@ function customTip() {
   }
 }
 
-function showDiv() {
+function showCustomTip() {
   document.getElementById("radioTipSection").style.display = "none";
   document.getElementById("customTipSection").style.display = "block";
+}
+
+function showSplitBill() {
+  document.getElementById("totalAmountSection").style.display = "none";
+  document.getElementById("SplitBillSection").style.display = "block";
 }
 
 // Refresh Page

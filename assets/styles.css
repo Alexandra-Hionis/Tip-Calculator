@@ -109,3 +109,8 @@ input.form-control:focus {
   margin-top: 18px;
   color: black;
 }
+
+.small-font {
+  font-size: 11px;
+  margin-top: -15px;
+}
