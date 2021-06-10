@@ -4,7 +4,7 @@ document.getElementById("customTipSection").style.display = "none";
 function calculateTip() {
   const billAmount = document.getElementById("billAmountInput").value;
   const myModal = document.getElementById("myModal");
-  if (billAmount.length == "") {
+  if (billAmount.length == "" || billAmount < 0) {
     myModal.style.display = "block";
   } else {
     const calculateBtn = document.querySelector("#calculateBtn");
@@ -26,14 +26,6 @@ function calculateTip() {
       const totalAmount = parseFloat(billAmount) + parseFloat(tipAmount);
       document.getElementById("totalAmount").innerHTML =
         "$" + totalAmount.toFixed(2);
-      console.log(
-        typeof billAmount,
-        billAmount,
-        typeof userSelection,
-        userSelection
-      );
-      console.log(typeof tipAmount, typeof totalAmount);
-      console.log(parseFloat(billAmount) + parseFloat(tipAmount));
     };
   }
 }
@@ -44,7 +36,12 @@ function customTip() {
   const customPercentInput = document.getElementById("customPercentInput")
     .value;
   const myModal = document.getElementById("myModal");
-  if (billAmountCustomTip.length == "" || customPercentInput == "") {
+  if (
+    billAmountCustomTip.length == "" ||
+    customPercentInput == "" ||
+    billAmountCustomTip < 0 ||
+    customPercentInput < 0
+  ) {
     myModal.style.display = "block";
   } else {
     // Divide by 100 to ensure correct %
