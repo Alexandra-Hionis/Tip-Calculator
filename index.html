@@ -59,6 +59,7 @@
                         class="form-control billAmountInput"
                         id="billAmountInput"
                         placeholder="Amount"
+                        style="text-align: center;"
                     />
                     </div>
             
@@ -88,13 +89,34 @@
             <div class="col-sm-3"></div>
         </div>
         </div>
+        <div class="row">
+          <div class="col-sm-3"></div>
+          <div class="col-sm-3 left-column-align">
+              <p>Number of People</p>
+          </div>
+          <div class="col-sm-3 input">
+              <form class="row gy-1 gx-3 align-items-center">
+                  <div class="input-group" >
+                      
+                  <input 
+                      type="number"
+                      class="form-control"
+                      id="numPeople"
+                      placeholder="Amount"
+                      style="text-align: center;"
+                  />
+                  </div>
+          
+          <div class="col-sm-3"></div>
+          </div>
+      </div>
         <div class="col-sm-2"></div>
       
           <!-- Buttons -->
           <div class="row">
             <div class="col-sm-12">
               <!-- Custom Tip -->
-              <button onclick="showDiv()" type="button" class="btn btn-outline-danger" id="customBtn" value="Calculate">Custom Tip</button>
+              <button onclick="showCustomTip()" type="button" class="btn btn-outline-danger" id="customBtn" value="Calculate">Custom Tip</button>
           
               <!-- Button trigger calculation -->
               <button onclick="calculateTip()" type="button" class="btn btn-outline-danger" id="calculateBtn" value="Calculate">Calculate</button>
@@ -125,10 +147,12 @@
                     class="form-control billAmountInput"
                     id="billAmountInputTwo"
                     placeholder="Amount"
+                    style="text-align: center;"
                 />
                 </div>
         
         <div class="col-sm-3"></div>
+        
         </div>
     </div>
 
@@ -145,13 +169,36 @@
               <input type="number"
               class="form-control billAmountInput"
               id="customPercentInput"
-              placeholder="Percent">
+              placeholder="Percent"
+              style="text-align: center;">
               <span class="input-group-text">%</span>
             </div>
     
       <div class="col-sm-3"></div>
       </div>
     </div>
+
+    <div class="row">
+      <div class="col-sm-3"></div>
+      <div class="col-sm-3 left-column-align">
+          <p>Number of People</p>
+      </div>
+      <div class="col-sm-3 input">
+          <form class="row gy-1 gx-3 align-items-center">
+              <div class="input-group" >
+                  
+              <input 
+                  type="number"
+                  class="form-control"
+                  id="numPeople"
+                  placeholder="Amount"
+                  style="text-align: center;"
+              />
+              </div>
+      
+      <div class="col-sm-3"></div>
+      </div>
+  </div>
     <div class="col-sm-2"></div>
   
       <!-- Calculate Button -->
@@ -171,9 +218,9 @@
 <!-- End Custom Tip Section -->
 
 <!-- Bottom section -->
-<!-- Start total amount section -->
         <!-- Tip Amount  -->
-<section>
+<!-- Total section -->
+<!-- Total Tip -->
     <div class="row">
         <div class="col-sm-2"></div>
         <div class="col-sm-8 bottom-section" id="totalAmountSection">
@@ -189,7 +236,7 @@
           </div>
         </div>
   
-        <!-- Total -->
+        <!-- Bill total -->
         <div class="row">
           <div class="col-sm-3"></div>
           <div class="col-sm-3 left-column-align">
@@ -201,14 +248,39 @@
           <div class="col-sm-3"></div>
         </div>
       </div>
+      <!-- Split tip amount -->
+      <div class="row">
+        <div class="col-sm-3"></div>
+        <div class="col-sm-3 left-column-align">
+          <!-- Tip Amount  -->
+            <p>Tip Amount</p>
+            <p class="small-font">per person</p>
+        </div>
+        <div class="col-sm-3 right-column-dollars">
+            <div id="splitTipAmount">$0.00</div>
+         
+        <div class="col-sm-3"></div>
+      </div>
+    </div>
+
+    <!-- Split total -->
+    <div class="row">
+      <div class="col-sm-3"></div>
+      <div class="col-sm-3 left-column-align">
+        <p>Bill Total</p>
+        <p class="small-font">per person</p>
+        </div>
+        <div class="col-sm-3 right-column-dollars">
+            <div id="splitTotalAmount">$0.00</div>
+       
+      <div class="col-sm-3"></div>
+    </div>
+  </div>
         <div class="col-sm-2"></div>
         <div class="col-sm-12">
             <!-- Buttons -->
           <div class="row">
             <div class="col-sm-12">
-              <!-- Custom Tip -->
-              <button onclick="showSplitBill()" type="button" class="btn btn-outline-danger" id="splitBtn" value="Calculate">Split Bill</button>
-          
               <!-- Reset Button -->
               <button onclick="refreshPage()" type="button" class="btn btn-outline-danger" id="reset-btn" value="Calculate">Reset</button>
             </div>
@@ -218,79 +290,9 @@
       
       </div>
     </section>
-      <!-- End total amount section -->
+      
 
-      <!-- Start split bill section -->
-  <!-- Bottom section -->
-        
-        <section>
-        <!-- Number of people -->
-        <div class="row">
-          <div class="col-sm-2"></div>
-          <div class="col-sm-8 bottom-section" id="SplitBillSection">
-            <div class="row">
-              <div class="col-sm-3"></div>
-              <div class="col-sm-3 left-column-align">
-                  <p>Number of People</p>
-              </div>
-              <div class="col-sm-3 input">
-                  <form class="row gy-1 gx-3 align-items-center">
-                      <div class="input-group" >
-                      <input 
-                          type="number"
-                          class="form-control peopleAmountInput"
-                          id="peopleAmountInput"
-                          placeholder="Amount"
-                      />
-                      </div>
-              
-              <div class="col-sm-3"></div>
-              </div>
-          </div>
-            <div class="row">
-              <div class="col-sm-3"></div>
-              <div class="col-sm-3 left-column-align">
-                <!-- Tip Amount  -->
-                  <p>Tip Amount</p>
-                  <p class="small-font">per person</p>
-              </div>
-              <div class="col-sm-3 right-column-dollars">
-                  <div id="tipAmount">$0.00</div>
-               
-              <div class="col-sm-3"></div>
-            </div>
-          </div>
-    
-          <!-- Total -->
-          <div class="row">
-            <div class="col-sm-3"></div>
-            <div class="col-sm-3 left-column-align">
-              <p>Bill Total</p>
-              <p class="small-font">per person</p>
-              </div>
-              <div class="col-sm-3 right-column-dollars">
-                  <div id="totalAmount">$0.00</div>
-             
-            <div class="col-sm-3"></div>
-          </div>
-        </div>
-          <div class="col-sm-2"></div>
-          <div class="col-sm-12">
-              <!-- Buttons -->
-            <div class="row">
-              <div class="col-sm-12">
-                <!-- Split -->
-                <!-- Reset Button -->
-                <button onclick="refreshPage()" type="button" class="btn btn-outline-danger" id="reset-btn" value="Calculate">Reset</button>
-                <button onclick="splitBill()" type="button" class="btn btn-outline-danger" id="splitBtn" value="Calculate">Split Bill</button>
-              </div>
-              </div>
-         </div>
-        </div>
-        
-        </div>
-      </section>
-      <!-- End split bill section -->
+ 
       <br>
       <br>
       <br>

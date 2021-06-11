@@ -1,9 +1,11 @@
 // Hide custom tip section & split bill section
 document.getElementById("customTipSection").style.display = "none";
-document.getElementById("SplitBillSection").style.display = "none";
 
 function calculateTip() {
   const billAmount = document.getElementById("billAmountInput").value;
+  const numPeople = document.getElementById("numPeople").value;
+  const splitTipAmount = document.getElementById("splitTipAmount").value;
+  const splitTotalAmount = document.getElementById("splitTotalAmount").value;
   const myModal = document.getElementById("myModal");
   if (billAmount.length == "" || billAmount < 0) {
     myModal.style.display = "block";
@@ -19,14 +21,31 @@ function calculateTip() {
           break;
         }
       }
-      // Use toFixed to make sure that the number has two digits ater the decimal
-      // Currently. billAmount and tip % are strings. I converted decimal numbers to and integer, doing the math and than converting it back to a decimal number. There is bill amount and I multiplied that by 100 to make it an integer, than multiply that by tip percent times 10 to make it an integer and than divide by 1000 to get the decimal back.
-      const tipAmount = (billAmount * 100 * (userSelection * 10)) / 1000;
-      document.getElementById("tipAmount").innerHTML =
-        "$" + tipAmount.toFixed(2);
-      const totalAmount = parseFloat(billAmount) + parseFloat(tipAmount);
-      document.getElementById("totalAmount").innerHTML =
-        "$" + totalAmount.toFixed(2);
+      if (numPeople >= 2) {
+        // Use toFixed to make sure that the number has two digits ater the decimal
+        // Currently. billAmount and tip % are strings. I converted decimal numbers to and integer, doing the math and than converting it back to a decimal number. There is bill amount and I multiplied that by 100 to make it an integer, than multiply that by tip percent times 10 to make it an integer and than divide by 1000 to get the decimal back.
+        const tipAmount = (billAmount * 100 * (userSelection * 10)) / 1000;
+        document.getElementById("tipAmount").innerHTML =
+          "$" + tipAmount.toFixed(2);
+        const totalAmount = parseFloat(billAmount) + parseFloat(tipAmount);
+        document.getElementById("totalAmount").innerHTML =
+          "$" + totalAmount.toFixed(2);
+        const splitTip = tipAmount / numPeople;
+        document.getElementById("splitTipAmount").innerHTML =
+          "$" + splitTip.toFixed(2);
+        const splitTotalAmount = totalAmount / numPeople;
+        document.getElementById("splitTotalAmount").innerHTML =
+          "$" + splitTotalAmount.toFixed(2);
+      } else {
+        document.getElementById("splitTipAmount").style.display = "0.00";
+        document.getElementById("splitTotalAmount").style.display = "0.00";
+        const tipAmount = (billAmount * 100 * (userSelection * 10)) / 1000;
+        document.getElementById("tipAmount").innerHTML =
+          "$" + tipAmount.toFixed(2);
+        const totalAmount = parseFloat(billAmount) + parseFloat(tipAmount);
+        document.getElementById("totalAmount").innerHTML =
+          "$" + totalAmount.toFixed(2);
+      }
     };
   }
 }
