@@ -18,8 +18,12 @@ Let's say you had a great dinner and want to calculate the tip quickly and effic
 
 A simple application where all the user needs to do is enter inputs or press a button and their tip and bill total are magically displayed.
 
-![image 1](assets/images/sample-1.png)
-![image 2](assets/images/sample-2.png)
+![image 1](assets/images/img1.png)
+![image 2](assets/images/img2.png)
+![image 3](assets/images/img3.png)
+![image 4](assets/images/img4.png)
+![image 5](assets/images/img5.png)
+![image 6](assets/images/img6.png)
 
 ## License
 
