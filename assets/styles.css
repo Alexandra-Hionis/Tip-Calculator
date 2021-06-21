@@ -7,20 +7,29 @@ header {
   font-size: 38px;
   text-align: center;
 }
-.top-section {
-  padding: 30px;
-  margin-top: 30px;
-  background-color: #2b2e5c;
-  border-radius: 15px 15px 15px 15px;
-  color: white;
-  text-align: center;
+
+/* Button Styles */
+
+/* Tip Radio Buttons */
+
+.button-outline {
+  color: #ea8a56;
+  border: 1px solid #ea8a56;
 }
 
-.left-column-align {
-  margin-top: 18px;
+.button-outline:hover,
+.button-outline:focus {
+  background: #ea8a56;
+}
+
+.button-outline:active,
+.button-outline.active {
+  background: #ea8a56;
+  box-shadow: none;
 }
 
 /* Calculate Button */
+
 .btn-outline-danger {
   margin-top: 22px;
   color: #ea8a56;
@@ -67,6 +76,8 @@ header {
   border-color: #ea8a56;
 }
 
+/* Input Styles */
+
 .input {
   padding: 10px;
   align-items: center;
@@ -75,6 +86,17 @@ header {
 input.form-control:focus {
   outline: none !important;
   box-shadow: none;
+}
+
+/* Top and Bottom section styles aka input = top and results = bottom*/
+
+.top-section {
+  padding: 30px;
+  margin-top: 30px;
+  background-color: #2b2e5c;
+  border-radius: 15px 15px 15px 15px;
+  color: white;
+  text-align: center;
 }
 
 .bottom-section {
@@ -87,30 +109,20 @@ input.form-control:focus {
   text-align: center;
 }
 
-/* Tip Radio Buttons */
-
-.button-outline {
-  color: #ea8a56;
-  border: 1px solid #ea8a56;
-}
-
-.button-outline:hover,
-.button-outline:focus {
-  background: #ea8a56;
-}
-
-.button-outline:active,
-.button-outline.active {
-  background: #ea8a56;
-  box-shadow: none;
-}
+/* Column styles */
 
 .right-column-dollars {
   margin-top: 18px;
   color: black;
 }
 
+.left-column-align {
+  margin-top: 18px;
+}
+
+/* Font style per person in bottom section */
 .small-font {
   font-size: 11px;
   margin-top: -15px;
+  color: #ea8a56;
 }
