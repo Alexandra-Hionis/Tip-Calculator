@@ -23,7 +23,6 @@ A simple application where all the user needs to do is enter inputs or press a b
 ![image 3](assets/images/img3.png)
 ![image 4](assets/images/img4.png)
 ![image 5](assets/images/img5.png)
-![image 6](assets/images/img6.png)
 
 ## License
 
